@@ -1,0 +1,326 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+div a img {
+  display: none;
+}
+
+.alumni-sans pinstripe-regular {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.alumni-sans pinstripe-regular-italic {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.header {
+  width: 100%;
+}
+
+.header-content {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.header-content img {
+  width: 100%;
+}
+
+.header-text {
+  margin-top: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  letter-spacing: 4px;
+  font-size: 50px;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+}
+
+.invite-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.invite-text-content {
+  width: 80%;
+  text-align: center;
+}
+
+h4:first-child {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #463e31;
+  margin-top: 18px;
+}
+
+.invite-text h6 {
+  font-weight: lighter;
+  font-size: 20px;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  color: #463e31;
+}
+
+h5 {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  font-weight: lighter;
+  color: #463e31;
+}
+
+h4:nth-child(3) {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 45px;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  color: #463e31;
+}
+
+.church {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.church .location {
+  margin-left: 50px;
+}
+
+.location h6 {
+  color: #463e31;
+  font-weight: lighter;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  word-spacing: 3px;
+}
+
+.location img {
+  margin-right: 5px;
+  margin-bottom: 10px;
+  transition: 2s;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.church-text {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0 2px;
+}
+
+.rest {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rest img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.church img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  background-color: #463e31;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  color: #f1f1f1;
+  padding: 12px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.loc-button h6 {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.formGroup {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.formComponent {
+  padding: 10px;
+}
+
+.formComponent input {
+  padding: 10px;
+}
+
+.formButton {
+  display: flex;
+  justify-content: center;
+}
+
+.formButton input {
+  padding: 10px 40px 10px 40px;
+  margin-top: 5px;
+  background-color: #463e31;
+  cursor: pointer;
+  color: white;
+}
+
+.end-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  color: #463e31;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 25px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+.end-text h6 {
+  text-align: center;
+}
+
+.end-text p {
+  color: #463e31;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.footer {
+  width: 100%;
+}
+
+.footer-content {
+  background-color: #463e31;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.message {
+  display: none;
+}
+
+.notification {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #f8d7da;
+  color: #721c24;
+  text-align: center;
+  z-index: 1000;
+}
+
+.notification.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.notification.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.notification button {
+  margin-top: 10px;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
+@media only screen and (min-width: 600px) {
+  .message {
+    display: block;
+    color: red;
+    font-size: 30px;
+  }
+
+  .message p {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .my {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 435px) {
+  .location h6 {
+    font-size: 17px;
+  }
+
+  .loc-button h6 {
+    font-size: 11px;
+  }
+
+  .title h5 {
+    font-size: 20px;
+  }
+
+  .clock h4 {
+    font-size: 30px;
+  }
+
+  .church-text {
+    padding: 4px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .location h6 {
+    font-size: 15px;
+  }
+
+  .loc-button h6 {
+    font-size: 10px;
+  }
+}
