@@ -4,7 +4,6 @@
   "description": "Express server for Hraviratoms",
   "main": "server.js",
   "scripts": {
-    "server": "concurrently \"npm run server\" \"npm run client\"",
     "start": "node server.js",
     "vercel-build":"echo hello"
   },

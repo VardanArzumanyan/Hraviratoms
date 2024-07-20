@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, "../hraviratoms/build")));
-app.use("/data", express.static(path.join(__dirname, "../hraviratoms/public/data")));
+app.use("/data", express.static(path.join(__dirname, "../data")));
 
 // Endpoint to handle form submissions
 app.post("/submit", (req, res) => {
