@@ -5,9 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "node server.js",
-    "client": "cd ../hraviratoms && npm start",
-    "build": "cd ../hraviratoms && npm run build"
+    "server": "node server.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
