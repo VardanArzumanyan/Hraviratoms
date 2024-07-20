@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "server": "concurrently \"npm run server\" \"npm run client\"",
-    "start": "node server.js"
+    "start": "node server.js",
+    "vercel-build":"echo hello"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
