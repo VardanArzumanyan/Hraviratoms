@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import './GuestList.css'; // Create this CSS file for styling if needed
+import './GuestList.css';
 
 function GuestList() {
   const [guests, setGuests] = useState([]);
 
   useEffect(() => {
-    // Adjust the URL to point to the public directory
     fetch('/data/data.json')
       .then(response => {
         if (!response.ok) {
