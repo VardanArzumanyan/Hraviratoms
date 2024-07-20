@@ -19,7 +19,7 @@ app.post("/submit", (req, res) => {
   const { firstName, lastName, guestCount } = req.body;
 
   // Path to the data.json file
-  const dataPath = path.join(__dirname, "../hraviratoms/public/data/data.json");
+  const dataPath = path.join(__dirname, "../data/data.json");
 
   console.log("Attempting to read data from:", dataPath);
 
