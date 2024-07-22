@@ -251,7 +251,6 @@ a {
   background-color: #f8d7da;
   color: #721c24;
   text-align: center;
-  z-index: 1000;
 }
 
 .notification.success {
@@ -266,11 +265,8 @@ a {
 
 .notification button {
   margin-top: 10px;
-  background-color: transparent;
-  border: none;
-  color: inherit;
-  cursor: pointer;
 }
+
 
 
 @media only screen and (min-width: 600px) {

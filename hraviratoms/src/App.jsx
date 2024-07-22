@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import "./App.css";
-import hall from "./pics/hall.jpg";
-import lusavorich from "./pics/lusavorich.jpeg";
-import pin from "./pics/pin.png";
-import sd from "./pics/sd.jpg";
+import React, { useState } from 'react';
+import './App.css';
+import hall from './pics/hall.jpg';
+import lusavorich from './pics/lusavorich.jpeg';
+import pin from './pics/pin.png';
+import sd from './pics/sd.jpg';
 
 function App() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    guestCount: "",
+    firstName: '',
+    lastName: '',
+    guestCount: ''
   });
 
   const [notification, setNotification] = useState({
-    message: "",
-    type: "",
+    message: '',
+    type: '' 
   });
 
   const handleChange = (e) => {
@@ -24,56 +24,54 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!formData.firstName || !formData.lastName || !formData.guestCount) {
       setNotification({
-        message: "Fill in all the fields!",
-        type: "error",
+        message: 'Fill in all the fields!',
+        type: 'error'
       });
       return;
     }
-
-    fetch("/submit", {
-      method: "POST",
+    fetch('/submit', {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(formData)
     })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.error) {
-          console.error("Error:", data.error);
-          setNotification({
-            message: "There was an error submitting your request.",
-            type: "error",
-          });
-        } else {
-          console.log("Success:", data.message);
-          setNotification({
-            message: "Your request has been sent",
-            type: "success",
-          });
-          setFormData({
-            firstName: "",
-            lastName: "",
-            guestCount: "",
-          });
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
+    .then(response => response.json())
+    .then(data => {
+      if (data.error) {
+        console.error('Error:', data.error);
         setNotification({
-          message: "There was an error submitting your request.",
-          type: "error",
+          message: 'There was an error submitting your request.',
+          type: 'error'
         });
+      } else {
+        console.log('Success:', data.message);
+        setNotification({
+          message: 'Your request has been sent',
+          type: 'success'
+        });
+        setFormData({
+          firstName: '',
+          lastName: '',
+          guestCount: ''
+        });
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      setNotification({
+        message: 'There was an error submitting your request.',
+        type: 'error'
       });
+    });
   };
 
   const closeNotification = () => {
     setNotification({
-      message: "",
-      type: "",
+      message: '',
+      type: ''
     });
   };
 
@@ -107,7 +105,7 @@ function App() {
               հիշարժան օրը
             </h6>
             <h4>18.08.2024</h4>
-            <hr style={{ width: "100%", textAlign: "center" }}></hr>
+            <hr style={{ width: '100%', textAlign: 'center' }}></hr>
           </div>
         </div>
 
@@ -124,7 +122,7 @@ function App() {
             <img src={lusavorich} alt="" />
           </div>
           <div className="location">
-            <img src={pin} alt="" style={{ width: "30px" }} />
+            <img src={pin} alt="" style={{ width: '30px' }} />
             <h6>Սուրբ Գրիգոր Լուսավորիչ մայր եկեղեցի, ք․ Երևան </h6>
           </div>
           <a href="https://www.google.com/maps/place/%D0%A1%D0%BE%D0%B1%D0%BE%D1%80+%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B3%D0%BE+%D0%93%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%B8%D1%8F+%D0%9F%D1%80%D0%BE%D1%81%D0%B2%D0%B5%D1%82%D0%B8%D1%82%D0%B5%D0%BB%D1%8F/@40.172162,44.514665,17z/data=!3m1!4b1!4m6!3m5!1s0x406abcf5dce61905:0x5b1b85523b3f82de!8m2!3d40.1721579!4d44.5172399!16s%2Fm%2F06w5y6_?entry=ttu">
@@ -134,7 +132,7 @@ function App() {
           </a>
         </div>
 
-        <hr style={{ width: "80%", marginTop: "40px", marginLeft: "50px" }} />
+        <hr style={{ width: '80%', marginTop: '40px', marginLeft: '50px' }} />
         <div className="rest">
           <div className="church-text">
             <div className="title">
@@ -148,7 +146,7 @@ function App() {
             <img src={hall} alt="" />
           </div>
           <div className="location">
-            <img src={pin} alt="" style={{ width: "30px" }} />
+            <img src={pin} alt="" style={{ width: '30px' }} />
             <h6>ՍԱՖԱՐԻ ՀՈԼ, ք․ Չարենցավան</h6>
           </div>
 
@@ -158,7 +156,7 @@ function App() {
             </div>
           </a>
         </div>
-        <hr style={{ width: "80%", marginTop: "40px", marginLeft: "50px" }} />
+        <hr style={{ width: '80%', marginTop: '40px', marginLeft: '50px' }} />
 
         <div className="end-text">
           <h6>
@@ -192,7 +190,7 @@ function App() {
 
             <div className="formComponent">
               <input
-                type="text"
+                type="number"
                 id="guestCount"
                 name="guestCount"
                 placeholder="Հյուրերի քանակ"

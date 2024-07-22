@@ -1,28 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './GuestList.css';
 
-function GuestList() {
+const GuestList = () => {
   const [guests, setGuests] = useState([]);
 
   useEffect(() => {
-    fetch('/data/data.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setGuests(data);
-      })
-      .catch(error => {
-        console.error('Error fetching guest data:', error);
-      });
+    fetch('/guests')
+      .then(response => response.json())
+      .then(data => setGuests(data))
+      .catch(error => console.error('Error fetching guest data:', error));
   }, []);
 
   return (
     <div className="guest-list">
-      <h1>Guest List</h1>
+      <h2>Guest List</h2>
       <table>
         <thead>
           <tr>
@@ -32,23 +23,17 @@ function GuestList() {
           </tr>
         </thead>
         <tbody>
-          {guests.length > 0 ? (
-            guests.map((guest, index) => (
-              <tr key={index}>
-                <td>{guest.firstName}</td>
-                <td>{guest.lastName}</td>
-                <td>{guest.guestCount}</td>
-              </tr>
-            ))
-          ) : (
-            <tr>
-              <td colSpan="3">No guests found</td>
+          {guests.map((guest, index) => (
+            <tr key={index}>
+              <td>{guest.firstName}</td>
+              <td>{guest.lastName}</td>
+              <td>{guest.guestCount}</td>
             </tr>
-          )}
+          ))}
         </tbody>
       </table>
     </div>
   );
-}
+};
 
 export default GuestList;
