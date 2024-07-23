@@ -8,11 +8,11 @@
     "concurrently": "^8.2.2",
     "express": "^4.19.2",
     "mongodb": "^6.8.0",
-    "mongoose": "^8.5.1"
+    "mongoose": "^8.5.1",
+    "nodemon": "^3.1.4"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "node server.js",
+    "start": "nodemon ./api/index.js",
     "client": "cd hraviratoms && npm start",
     "build": "cd hraviratoms && npm run build"
   }
